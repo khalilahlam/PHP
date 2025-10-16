@@ -1,13 +1,12 @@
-<?php 
-
+<?php
 $nombre = $_GET['nombre'];
 $apellidos = $_GET['apellidos'];
 
-echo "Bienvenido, $nombre $apellidos";
+echo "<h2>Bienvenido, $nombre $apellidos</h2>";
+echo "<p>Selecciona una opción:</p>";
 
 // Enlaces
-echo '<br><a href="formdistritos.php?nombre=' . urlencode($nombre) . '&apellidos=' . urlencode($apellidos) . '">Datos por distritos</a>';
-echo '<br><a href="formbarrios.php?nombre=' . urlencode($nombre) . '&apellidos=' . urlencode($apellidos) . '">Datos por barrios (distrito de Patraix)</a>';
-echo '<br><a href="index.html?">Inicio</a>';
-
+echo '<a href="form_distritos.php?nombre=' . urlencode($nombre) . '&apellidos=' . urlencode($apellidos) . '">Datos por distritos</a><br>';
+echo '<a href="form_patraix.php?nombre=' . urlencode($nombre) . '&apellidos=' . urlencode($apellidos) . '">Datos por barrios (distrito de Patraix)</a><br>';
+echo '<a href="index.html">Volver al inicio</a>';
 ?>
